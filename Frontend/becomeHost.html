@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Become a Host - GetSetRide</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover-color: #1d4ed8;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .progress-step {
+            transition: all 0.3s ease;
+        }
+        .progress-step.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .progress-step.completed {
+            background-color: #10b981;
+            color: white;
+        }
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-20">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center text-gray-800">
+            <h1 class="text-2xl font-bold text-[var(--primary-color)]">
+                <a href="main.html">GETSETRIDE</a>
+            </h1>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a class="hover:text-[var(--primary-color)]" href="main.html">Home</a>
+                <a class="hover:text-[var(--primary-color)]" href="marketPlace.html">Marketplace</a>
+                <a class="hover:text-[var(--primary-color)]" href="#become-host">Become a Host</a>
+            </nav>
+            <div class="hidden md:block">
+                <a href="login.html"
+                    class="bg-[var(--primary-color)] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[var(--primary-hover-color)] transition-colors">
+                    Login / Signup</a>
+            </div>
+            <button class="md:hidden">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Page Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">Become a Host</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Start earning money by listing your vehicle on GetSetRide. Join thousands of hosts who are making passive income from their cars.
+            </p>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="mb-8">
+            <div class="flex justify-center items-center space-x-4 mb-4">
+                <div class="progress-step active w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold bg-gray-200 text-gray-600" data-step="1">1</div>
+                <div class="w-16 h-1 bg-gray-200"></div>
+                <div class="progress-step w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold bg-gray-200 text-gray-600" data-step="2">2</div>
+                <div class="w-16 h-1 bg-gray-200"></div>
+                <div class="progress-step w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold bg-gray-200 text-gray-600" data-step="3">3</div>
+                <div class="w-16 h-1 bg-gray-200"></div>
+                <div class="progress-step w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold bg-gray-200 text-gray-600" data-step="4">4</div>
+                <div class="w-16 h-1 bg-gray-200"></div>
+                <div class="progress-step w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold bg-gray-200 text-gray-600" data-step="5">5</div>
+            </div>
+            <div class="flex justify-center text-sm text-gray-500 space-x-12">
+                <span>Host Info</span>
+                <span>Vehicle Info</span>
+                <span>Documents</span>
+                <span>Pricing</span>
+                <span>Agreement</span>
+            </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="max-w-4xl mx-auto">
+            <form id="hostRegistrationForm" class="bg-white rounded-lg shadow-md p-8">
+                
+                <!-- Step 1: Host Information -->
+                <div class="form-section active" data-section="1">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-900">Host Information</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="fullName">Full Name *</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="fullName" type="text" placeholder="Enter your full name" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="email">Email Address *</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="email" type="email" placeholder="Enter your email" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="phone">Phone Number *</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="phone" type="tel" placeholder="Enter your phone number" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="city">City *</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="city" type="text" placeholder="Enter your city" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="state">State *</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                    id="state" required>
+                                <option value="">Select your state</option>
+                                <option value="delhi">Delhi</option>
+                                <option value="mumbai">Mumbai</option>
+                                <option value="bangalore">Bangalore</option>
+                                <option value="chennai">Chennai</option>
+                                <option value="kolkata">Kolkata</option>
+                                <option value="pune">Pune</option>
+                                <option value="hyderabad">Hyderabad</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="pincode">PIN Code *</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="pincode" type="text" placeholder="Enter PIN code" required />
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="text-lg font-semibold mb-4">Driver's License Information</h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" for="licenseNumber">License Number *</label>
+                                <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                       id="licenseNumber" type="text" placeholder="Enter license number" required />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" for="licenseExpiry">License Expiry Date *</label>
+                                <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                       id="licenseExpiry" type="date" required />
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-medium text-gray-700 mb-2" for="licenseUpload">Upload License Copy *</label>
+                                <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                                    <span class="material-icons text-4xl text-gray-400 mb-2">cloud_upload</span>
+                                    <p class="text-gray-500 mb-2">Drop your license file here or click to browse</p>
+                                    <input class="hidden" id="licenseUpload" type="file" accept="image/*,.pdf" required />
+                                    <button type="button" onclick="document.getElementById('licenseUpload').click()" 
+                                            class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+                                        Choose File
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Vehicle Information -->
+                <div class="form-section" data-section="2">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-900">Vehicle Information</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="carMake">Car Make *</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                    id="carMake" required>
+                                <option value="">Select car make</option>
+                                <option value="maruti">Maruti Suzuki</option>
+                                <option value="hyundai">Hyundai</option>
+                                <option value="tata">Tata</option>
+                                <option value="mahindra">Mahindra</option>
+                                <option value="honda">Honda</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="kia">Kia</option>
+                                <option value="mg">MG</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="carModel">Car Model *</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="carModel" type="text" placeholder="Enter car model" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="carYear">Year *</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                    id="carYear" required>
+                                <option value="">Select year</option>
+                                <option value="2024">2024</option>
+                                <option value="2023">2023</option>
+                                <option value="2022">2022</option>
+                                <option value="2021">2021</option>
+                                <option value="2020">2020</option>
+                                <option value="2019">2019</option>
+                                <option value="2018">2018</option>
+                                <option value="2017">2017</option>
+                                <option value="2016">2016</option>
+                                <option value="2015">2015</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="registrationNumber">Registration Number *</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="registrationNumber" type="text" placeholder="e.g., DL01AB1234" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="vin">VIN Number</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="vin" type="text" placeholder="Enter VIN (optional)" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="odometer">Current Odometer Reading (km) *</label>
+                            <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                   id="odometer" type="number" placeholder="Enter current mileage" required />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="fuelType">Fuel Type *</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                    id="fuelType" required>
+                                <option value="">Select fuel type</option>
+                                <option value="petrol">Petrol</option>
+                                <option value="diesel">Diesel</option>
+                                <option value="cng">CNG</option>
+                                <option value="electric">Electric</option>
+                                <option value="hybrid">Hybrid</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="transmission">Transmission *</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                    id="transmission" required>
+                                <option value="">Select transmission</option>
+                                <option value="manual">Manual</option>
+                                <option value="automatic">Automatic</option>
+                                <option value="cvt">CVT</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="seats">Number of Seats *</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                    id="seats" required>
+                                <option value="">Select seats</option>
+                                <option value="2">2 Seater</option>
+                                <option value="4">4 Seater</option>
+                                <option value="5">5 Seater</option>
+                                <option value="7">7 Seater</option>
+                                <option value="8">8 Seater</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="carType">Car Type *</label>
+                            <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                    id="carType" required>
+                                <option value="">Select car type</option>
+                                <option value="hatchback">Hatchback</option>
+                                <option value="sedan">Sedan</option>
+                                <option value="suv">SUV</option>
+                                <option value="muv">MUV</option>
+                                <option value="coupe">Coupe</option>
+                                <option value="convertible">Convertible</option>
+                                <option value="wagon">Wagon</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Car Photos *</label>
+                        <p class="text-sm text-gray-500 mb-4">Upload high-quality photos of your car (interior and exterior)</p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                                <span class="material-icons text-3xl text-gray-400 mb-2">add_a_photo</span>
+                                <p class="text-gray-500 mb-2">Exterior Photos</p>
+                                <input class="hidden" id="exteriorPhotos" type="file" accept="image/*" multiple required />
+                                <button type="button" onclick="document.getElementById('exteriorPhotos').click()" 
+                                        class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+                                    Upload Photos
+                                </button>
+                            </div>
+                            <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                                <span class="material-icons text-3xl text-gray-400 mb-2">airline_seat_recline_normal</span>
+                                <p class="text-gray-500 mb-2">Interior Photos</p>
+                                <input class="hidden" id="interiorPhotos" type="file" accept="image/*" multiple required />
+                                <button type="button" onclick="document.getElementById('interiorPhotos').click()" 
+                                        class="bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors">
+                                    Upload Photos
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Documents -->
+                <div class="form-section" data-section="3">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-900">Documents & Insurance</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Insurance Details -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Insurance Information</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="insuranceProvider">Insurance Provider *</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="insuranceProvider" type="text" placeholder="e.g., HDFC ERGO, ICICI Lombard" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="policyNumber">Policy Number *</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="policyNumber" type="text" placeholder="Enter policy number" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="insuranceExpiry">Insurance Expiry Date *</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="insuranceExpiry" type="date" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="insuranceType">Insurance Type *</label>
+                                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                            id="insuranceType" required>
+                                        <option value="">Select insurance type</option>
+                                        <option value="comprehensive">Comprehensive</option>
+                                        <option value="third-party">Third Party</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Document Uploads -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Document Uploads</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Insurance Certificate *</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <span class="material-icons text-3xl text-gray-400 mb-2">description</span>
+                                        <p class="text-gray-500 text-sm mb-2">Upload insurance document</p>
+                                        <input class="hidden" id="insuranceDoc" type="file" accept="image/*,.pdf" required />
+                                        <button type="button" onclick="document.getElementById('insuranceDoc').click()" 
+                                                class="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-gray-200 transition-colors">
+                                            Choose File
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">RC (Registration Certificate) *</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <span class="material-icons text-3xl text-gray-400 mb-2">assignment</span>
+                                        <p class="text-gray-500 text-sm mb-2">Upload RC document</p>
+                                        <input class="hidden" id="rcDoc" type="file" accept="image/*,.pdf" required />
+                                        <button type="button" onclick="document.getElementById('rcDoc').click()" 
+                                                class="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-gray-200 transition-colors">
+                                            Choose File
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Government ID Proof</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <span class="material-icons text-3xl text-gray-400 mb-2">badge</span>
+                                        <p class="text-gray-500 text-sm mb-2">Aadhaar/Passport (Optional)</p>
+                                        <input class="hidden" id="govIdDoc" type="file" accept="image/*,.pdf" />
+                                        <button type="button" onclick="document.getElementById('govIdDoc').click()" 
+                                                class="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-gray-200 transition-colors">
+                                            Choose File
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">PAN Card *</label>
+                                    <div class="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
+                                        <span class="material-icons text-3xl text-gray-400 mb-2">credit_card</span>
+                                        <p class="text-gray-500 text-sm mb-2">Upload PAN card</p>
+                                        <input class="hidden" id="panDoc" type="file" accept="image/*,.pdf" required />
+                                        <button type="button" onclick="document.getElementById('panDoc').click()" 
+                                                class="bg-gray-100 text-gray-700 px-3 py-1 text-sm rounded hover:bg-gray-200 transition-colors">
+                                            Choose File
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Availability & Pricing -->
+                <div class="form-section" data-section="4">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-900">Availability & Pricing</h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Pricing Section -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Pricing</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="dailyRate">Daily Rate (₹) *</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="dailyRate" type="number" placeholder="e.g., 1000" required />
+                                    <p class="text-sm text-gray-500 mt-1">Recommended: ₹800 - ₹1500 per day</p>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="hourlyRate">Hourly Rate (₹)</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="hourlyRate" type="number" placeholder="e.g., 100" />
+                                    <p class="text-sm text-gray-500 mt-1">Optional: For hourly rentals</p>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="minRental">Minimum Rental Period *</label>
+                                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                            id="minRental" required>
+                                        <option value="">Select minimum period</option>
+                                        <option value="4-hours">4 Hours</option>
+                                        <option value="1-day">1 Day</option>
+                                        <option value="2-days">2 Days</option>
+                                        <option value="3-days">3 Days</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="maxRental">Maximum Rental Period</label>
+                                    <select class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                            id="maxRental">
+                                        <option value="">No limit</option>
+                                        <option value="7-days">7 Days</option>
+                                        <option value="15-days">15 Days</option>
+                                        <option value="30-days">30 Days</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Availability Section -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Availability</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="availability" value="always" class="mr-3" checked />
+                                        <span class="font-medium">Always Available</span>
+                                    </label>
+                                    <p class="text-sm text-gray-500 ml-6">Your car is available for booking anytime</p>
+                                </div>
+                                <div>
+                                    <label class="flex items-center">
+                                        <input type="radio" name="availability" value="custom" class="mr-3" />
+                                        <span class="font-medium">Custom Schedule</span>
+                                    </label>
+                                    <p class="text-sm text-gray-500 ml-6">Set specific dates when your car is available</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Details -->
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Payment Information</h3>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="bankAccount">Bank Account Number *</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="bankAccount" type="text" placeholder="Enter account number" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="ifscCode">IFSC Code *</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="ifscCode" type="text" placeholder="Enter IFSC code" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="accountHolderName">Account Holder Name *</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="accountHolderName" type="text" placeholder="Enter account holder name" required />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2" for="upiId">UPI ID (Optional)</label>
+                                    <input class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]" 
+                                           id="upiId" type="text" placeholder="yourname@paytm" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Terms & Agreement -->
+                <div class="form-section" data-section="5">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-900">Terms & Agreement</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h3 class="text-lg font-semibold mb-4">Host Agreement Summary</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <span class="material-icons text-green-600 mr-2 mt-0.5">check_circle</span>
+                                    You will receive 75% of the rental amount after deducting platform fees
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-green-600 mr-2 mt-0.5">check_circle</span>
+                                    GetSetRide provides comprehensive insurance coverage during rentals
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-green-600 mr-2 mt-0.5">check_circle</span>
+                                    You have the right to approve or decline any booking request
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-green-600 mr-2 mt-0.5">check_circle</span>
+                                    24/7 roadside assistance is provided for all rentals
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="material-icons text-green-600 mr-2 mt-0.5">check_circle</span>
+                                    All renters are verified and must provide valid documents
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <input type="checkbox" id="termsConditions" required class="mt-1 mr-3" />
+                                <label for="termsConditions" class="text-sm text-gray-700">
+                                    I agree to GetSetRide's <a href="#" class="text-[var(--primary-color)] hover:underline">Terms & Conditions</a> 
+                                    and understand the host responsibilities *
+                                </label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" id="safetyStandards" required class="mt-1 mr-3" />
+                                <label for="safetyStandards" class="text-sm text-gray-700">
+                                    I confirm that my vehicle meets all safety and maintenance standards required by the platform *
+                                </label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" id="insurancePolicy" required class="mt-1 mr-3" />
+                                <label for="insurancePolicy" class="text-sm text-gray-700">
+                                    I understand and agree to the liability and insurance policies *
+                                </label>
+                            </div>
+                            <div class="flex items-start">
+                                <input type="checkbox" id="accurateInfo" required class="mt-1 mr-3" />
+                                <label for="accurateInfo" class="text-sm text-gray-700">
+                                    I confirm that all information provided is accurate and up-to-date *
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                            <div class="flex items-start">
+                                <span class="material-icons text-blue-600 mr-3 mt-0.5">info</span>
+                                <div>
+                                    <h4 class="font-semibold text-blue-900 mb-2">Next Steps</h4>
+                                    <p class="text-blue-800 text-sm">
+                                        After submitting your application, our team will review your documents within 24-48 hours. 
+                                        You'll receive an email confirmation once your account is approved and your car is listed on our platform.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="flex justify-between mt-8 pt-6 border-t border-gray-200">
+                    <button type="button" id="prevBtn" onclick="previousStep()" 
+                            class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors" 
+                            style="display: none;">
+                        Previous
+                    </button>
+                    <button type="button" id="nextBtn" onclick="nextStep()" 
+                            class="px-6 py-3 bg-[var(--primary-color)] text-white rounded-lg hover:bg-[var(--primary-hover-color)] transition-colors ml-auto">
+                        Next
+                    </button>
+                    <button type="submit" id="submitBtn" 
+                            class="px-8 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors ml-auto" 
+                            style="display: none;">
+                        Submit Application
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-16 mt-12">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div class="lg:col-span-2">
+                <h4 class="text-xl font-bold">GETSETRIDE</h4>
+                <p class="text-gray-600 mt-4">Our vision is to provide convenience and help increase your sales
+                    business.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a class="text-gray-600 hover:text-[var(--primary-color)]" href="#"><svg class="h-6 w-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z">
+                            </path>
+                        </svg></a>
+                    <a class="text-gray-600 hover:text-[var(--primary-color)]" href="#"><svg class="h-6 w-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.585-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.585-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.585.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.058 1.644-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98C15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z">
+                            </path>
+                        </svg></a>
+                    <a class="text-gray-600 hover:text-[var(--primary-color)]" href="#"><svg class="h-6 w-6"
+                            fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085 4.934 4.934 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.213 0-.425-.015-.637A9.954 9.954 0 0024 4.593z">
+                            </path>
+                        </svg></a>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-bold">About</h5>
+                <ul class="mt-4 space-y-2 text-gray-600">
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">How it works</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Featured</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Partnership</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Business Relation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold">Community</h5>
+                <ul class="mt-4 space-y-2 text-gray-600">
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Events</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Blog</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Podcast</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Invite a friend</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold">Socials</h5>
+                <ul class="mt-4 space-y-2 text-gray-600">
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Discord</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Instagram</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Twitter</a></li>
+                    <li><a class="hover:text-[var(--primary-color)]" href="#">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="container mx-auto px-4 mt-12 border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between text-gray-600 text-center md:text-left">
+            <p class="mb-4 md:mb-0">©2022 Auto Fast. All rights reserved</p>
+            <div class="space-x-8">
+                <a class="hover:text-[var(--primary-color)]" href="#">Privacy &amp; Policy</a>
+                <a class="hover:text-[var(--primary-color)]" href="#">Terms &amp; Condition</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 5;
+
+        function updateProgressIndicator() {
+            // Update progress steps
+            for (let i = 1; i <= totalSteps; i++) {
+                const step = document.querySelector(`[data-step="${i}"]`);
+                if (i < currentStep) {
+                    step.classList.remove('active');
+                    step.classList.add('completed');
+                } else if (i === currentStep) {
+                    step.classList.remove('completed');
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active', 'completed');
+                }
+            }
+
+            // Show/hide sections
+            document.querySelectorAll('.form-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.querySelector(`[data-section="${currentStep}"]`).classList.add('active');
+
+            // Update buttons
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const submitBtn = document.getElementById('submitBtn');
+
+            prevBtn.style.display = currentStep > 1 ? 'block' : 'none';
+            nextBtn.style.display = currentStep < totalSteps ? 'block' : 'none';
+            submitBtn.style.display = currentStep === totalSteps ? 'block' : 'none';
+        }
+
+        function validateCurrentStep() {
+            const currentSection = document.querySelector(`[data-section="${currentStep}"]`);
+            const requiredFields = currentSection.querySelectorAll('[required]');
+            
+            for (let field of requiredFields) {
+                if (!field.value.trim()) {
+                    field.focus();
+                    alert('Please fill in all required fields before proceeding.');
+                    return false;
+                }
+            }
+
+            // Special validation for step 5 (checkboxes)
+            if (currentStep === 5) {
+                const requiredCheckboxes = currentSection.querySelectorAll('input[type="checkbox"][required]');
+                for (let checkbox of requiredCheckboxes) {
+                    if (!checkbox.checked) {
+                        checkbox.focus();
+                        alert('Please accept all required terms and conditions.');
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        function nextStep() {
+            if (validateCurrentStep() && currentStep < totalSteps) {
+                currentStep++;
+                updateProgressIndicator();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                updateProgressIndicator();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Form submission
+        document.getElementById('hostRegistrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateCurrentStep()) {
+                // Show success message
+                alert('Application submitted successfully! You will receive a confirmation email within 24-48 hours.');
+                
+                // Here you would typically send the form data to your backend
+                console.log('Form submitted');
+                
+                // Redirect to success page or dashboard
+                // window.location.href = 'dashboard.html';
+            }
+        });
+
+        // File upload handlers
+        function handleFileUpload(inputId, maxFiles = 1) {
+            const input = document.getElementById(inputId);
+            input.addEventListener('change', function(e) {
+                const files = e.target.files;
+                const button = input.nextElementSibling || input.parentElement.querySelector('button');
+                
+                if (files.length > 0) {
+                    if (files.length === 1) {
+                        button.textContent = files[0].name;
+                        button.classList.add('bg-green-100', 'text-green-700');
+                    } else {
+                        button.textContent = `${files.length} files selected`;
+                        button.classList.add('bg-green-100', 'text-green-700');
+                    }
+                }
+            });
+        }
+
+        // Initialize file upload handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressIndicator();
+            
+            // Setup file upload handlers
+            handleFileUpload('licenseUpload');
+            handleFileUpload('exteriorPhotos', 5);
+            handleFileUpload('interiorPhotos', 5);
+            handleFileUpload('insuranceDoc');
+            handleFileUpload('rcDoc');
+            handleFileUpload('govIdDoc');
+            handleFileUpload('panDoc');
+        });
+
+        // Set minimum date for date inputs to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('licenseExpiry').min = today;
+        document.getElementById('insuranceExpiry').min = today;
+    </script>
+</body>
+
+</html>

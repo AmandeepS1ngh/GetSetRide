@@ -1,6 +1,6 @@
 // Authentication service for GetSetRide
 
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://getsetride.onrender.com/api/auth';
 
 class AuthService {
   constructor() {

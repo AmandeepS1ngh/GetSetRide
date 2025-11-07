@@ -84,7 +84,7 @@ const Header = () => {
             How it Work
           </button>
           <Link 
-            className="px-4 py-2 bg-[var(--primary-color)] text-white rounded-lg hover:bg-[var(--primary-hover-color)] transition-colors font-medium" 
+            className="hover:text-[var(--primary-color)] transition-colors" 
             to="/add-car"
           >
             List Your Car

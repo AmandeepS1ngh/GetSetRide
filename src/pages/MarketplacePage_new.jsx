@@ -1,10 +1,12 @@
 // filepath: /Users/amandeepsingh/Documents/GitHub/GetSetRide/GetSetRide-in-react/src/pages/MarketplacePage.jsx
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Header from '../components/common/Header';
 import CarCard from '../components/marketplace/CarCard';
 import { getCars } from '../services/cars';
 
 const MarketplacePage = () => {
+  const [searchParams] = useSearchParams();
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -25,6 +27,24 @@ const MarketplacePage = () => {
     totalPages: 0,
     currentPage: 1
   });
+
+  // Initialize filters from URL parameters
+  useEffect(() => {
+    const urlCity = searchParams.get('city');
+    const urlPickupDate = searchParams.get('pickupDate');
+    const urlReturnDate = searchParams.get('returnDate');
+    
+    console.log('URL Search Params:', { urlCity, urlPickupDate, urlReturnDate });
+    
+    if (urlCity || urlPickupDate || urlReturnDate) {
+      console.log('Setting filters from URL');
+      setFilters(prev => ({
+        ...prev,
+        city: urlCity || prev.city,
+        // You can add date filtering logic here if your backend supports it
+      }));
+    }
+  }, [searchParams]);
 
   // Fetch cars from API
   useEffect(() => {

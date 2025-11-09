@@ -1,19 +1,12 @@
-const mongoose = require("mongoose");
+const app = require('./app');
+const connectDB = require('./config/database');
+require('dotenv').config();
 
-const connectDB = async () => {
-  try {
-    const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/yourLocalDB";
+const PORT = process.env.PORT || 5000;
 
-    await mongoose.connect(mongoURI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+// Connect to MongoDB
+connectDB();
 
-    console.log("✅ MongoDB connected successfully");
-  } catch (error) {
-    console.error("❌ MongoDB connection failed:", error.message);
-    process.exit(1); // Exit process with failure
-  }
-};
-
-module.exports = connectDB;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT} in ${process.env.NODE_ENV} mode`);
+});

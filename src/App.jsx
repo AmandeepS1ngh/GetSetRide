@@ -11,6 +11,7 @@ import MyBookingsPage from './pages/MyBookingsPage';
 import MyCarsPage from './pages/MyCarsPage';
 import AddCarPage from './pages/AddCarPage';
 import Footer from './components/common/Footer';
+import ChatBot from './components/marketplace/ChatBot';
 
 function App() {
   return (
@@ -29,7 +30,9 @@ function App() {
           <Route path="/add-car" element={<AddCarPage />} />
         </Routes>
         <Footer />
+      <ChatBot />
       </div>
+
     </BrowserRouter>
   );
 }

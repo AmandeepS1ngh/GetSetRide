@@ -3,22 +3,21 @@
 echo "🚗 GetSetRide - Starting Application..."
 echo ""
 
-# Check if MongoDB is running
-if ! pgrep -x mongod > /dev/null; then
-    echo "⚠️  MongoDB is not running"
-    echo "Starting MongoDB..."
-    brew services start mongodb-community
-    sleep 2
+# Check if .env file exists in backend
+if [ ! -f "backend/.env" ]; then
+    echo "❌ Backend .env file not found!"
+    echo "Please create backend/.env with your MongoDB Atlas connection string"
+    exit 1
 fi
 
-echo "✅ MongoDB is running"
+echo "✅ Environment files configured"
 echo ""
 
 # Start backend in a new terminal tab
 echo "🔧 Starting Backend Server..."
 osascript -e 'tell application "Terminal" to do script "cd '"$(pwd)"'/backend && npm run dev"'
 
-sleep 2
+sleep 3
 
 echo "🎨 Starting Frontend Server..."
 echo ""

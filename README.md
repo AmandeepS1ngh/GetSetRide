@@ -108,7 +108,3 @@ Run both servers concurrently to allow the frontend to call backend API endpoint
 - Check backend logs printed by `backend/src/server.js` and ensure the DB is reachable.
 - Verify environment variables in `backend/.env` (DB URL, JWT secret) are set correctly.
 - Inspect controllers for route definitions and payload expectations in `backend/src/controllers/`.
-
----
-
-If you want, I can update the README with exact npm scripts, environment variable names, or add a CONTRIBUTING section and license file.
